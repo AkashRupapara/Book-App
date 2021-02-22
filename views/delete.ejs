@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+    <body id="LoginForm">
+        <% if(errorMessage.length > 0) {%>
+            <div class="alert alert-success alert-dismissible">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <%= errorMessage %>
+              </div>
+        </div>
+        <% }%>
+        <div class="container">
+            <h2>DELETE BOOK</h2>
+            <form action="/delete" method="POST">
+                <div class="form-group">
+                  <label for="book-id">Book Id</label>
+                  <input type="text" class="form-control" name="book_id" placeholder="Enter Book Id">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </body>
+</html>
+
+
+
+
